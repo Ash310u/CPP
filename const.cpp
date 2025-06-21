@@ -3,11 +3,11 @@
 int main() {
     // const is a keyword that is used to declare a constant variable
     // tells the compiler to prevent anything form modifying it. (read-only)
-    const double pi = 3.14;
+    const double PI = 3.14;
     double radius = 5.0;
     
-    double circumference = 2 * pi * radius;
-    double area = pi * radius * radius;
+    double circumference = 2 * PI * radius;
+    double area = PI * radius * radius;
     
     std::cout << "Circumference: " << circumference << std::endl;
     std::cout << "Area: " << area << std::endl;
