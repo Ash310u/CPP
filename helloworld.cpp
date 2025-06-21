@@ -6,8 +6,11 @@ int main() {
     // << = output operator
     // endl = end line (basically \n)
     std::cout << "Hello World" << std::endl;
+    
+    // with \n
+    std::cout << "Hello World" << '\n';
 
-    // wihtout endl = without \n)
+    // without endl = without \n)
     std::cout << "Hello World";
 
     return 0;
