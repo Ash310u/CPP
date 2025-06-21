@@ -1,6 +1,8 @@
 #include <iostream>
 
 int main() {
+    // Primitive data types in CPP
+
     // Variable declaration and initialization
     // int = integer (whole numbers)
     // double = decimal (numbers with a decimal point)
@@ -12,14 +14,14 @@ int main() {
     int number = 42;
     double decimal = 3.14;
     char letter = 'A';
-    std::string text = "Hello Variables!";
+    std::string text = "Variables!";
     bool flag = true;
     
     // Displaying variables
     std::cout << "Integer: " << number << std::endl;
     std::cout << "Double: " << decimal << std::endl;
     std::cout << "Character: " << letter << std::endl;
-    std::cout << "String: " << text << std::endl;
+    std::cout << "String: Hello " << text << std::endl;
     std::cout << "Boolean: " << std::boolalpha << flag << std::endl;
     
     // Variable modification
