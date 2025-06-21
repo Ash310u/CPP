@@ -9,7 +9,7 @@
 
 // using is a C++11 feature
 // exact same thing as above but using 'using' keyword
-using pairlist_t = std::vector<std::pair<std::string, int>>;
+using pairlist_t = std::vector< std::pair< std::string, int > >;
 using text_t = std::string;
 
 int main() {
