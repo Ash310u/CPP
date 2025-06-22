@@ -15,8 +15,8 @@ int main() {
     // using namespace std;
     
     // Doing this brings only the name cout and endl from the std namespace into the current scope not all names.
-    using namespace std::cout;
-    using namespace std::endl;
+    using std::cout;
+    using std::endl;
 
     // :: = scope resolution operator
     int result = Math::add(2, 3); // Accessing add() from Math namespace
