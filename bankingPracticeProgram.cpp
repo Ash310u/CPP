@@ -9,11 +9,11 @@ int main() {
     double balance = 5000;
     double withdrawAmount;
     double depositAmount;
-    bool flag = false;
+    bool flag = true;
     std::cout << "Current Balance: " << balance << " $" << std::endl;
     
-    std::cout << "Enter anyone (B: Bank Balance, W: Withdraw Money, D: Deposit Money): " << std::endl;
     do {
+        std::cout << "Enter anyone (B: Bank Balance, W: Withdraw Money, D: Deposit Money, Q: Quit): " << std::endl;
         std::cin >> op;
         
         if (op == 'B' || op == 'b') {
@@ -26,9 +26,10 @@ int main() {
             std::cout << "Enter the amount to deposit: ";
             std::cin >> depositAmount;
             balance = deposit(balance, depositAmount);
+        } else if (op == 'Q' || op == 'q') {
+            flag = false;
         } else {
             std::cout << "Invalid input" << std::endl;
-            flag = true;
         }
     } while (flag);
     
@@ -51,8 +52,13 @@ double withdraw(double balance, double withdrawAmount) {
 }
 
 double deposit(double balance, double depositAmount) {
-    double handleDeposit = balance + depositAmount;
-    std::cout << "Deposit Amount: " << depositAmount << " $" << std::endl;
-    std::cout << "Current Balance: " << handleDeposit << " $" << std::endl;
-    return handleDeposit;
+    if(depositAmount <= 0) {
+        std::cout << "Deposit amount is not valid" << std::endl;
+    } else {
+        double handleDeposit = balance + depositAmount;
+        std::cout << "Deposit Amount: " << depositAmount << " $" << std::endl;
+        std::cout << "Current Balance: " << handleDeposit << " $" << std::endl;
+        return handleDeposit;
+    }
+    return balance;
 }
