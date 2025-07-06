@@ -16,6 +16,11 @@ int main() {
         std::cout << "Enter anyone (B: Bank Balance, W: Withdraw Money, D: Deposit Money, Q: Quit): " << std::endl;
         std::cin >> op;
         
+        // Clear any error flags from the input stream (like when invalid input is entered)
+        std::cin.clear();
+        // Flush the input buffer to remove any remaining characters (clears the input stream)
+        fflush(stdin);
+
         if (op == 'B' || op == 'b') {
             showBalance(balance);
         } else if (op == 'W' || op == 'w') {
