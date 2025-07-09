@@ -39,7 +39,7 @@ int& getReference(int& x) {
 }    
 
 // Function with default parameters
-void printMessage(std::string message = "Default message", int times = 1) {
+void printMessage(std::string message, int times) {
     for (int i = 0; i < times; i++) {
         std::cout << message << std::endl;
     }    
