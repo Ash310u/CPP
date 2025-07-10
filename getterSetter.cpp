@@ -14,13 +14,7 @@ class Stove {
     }
     // Setter for temperature (it's make a private variable writable)
     void setTemperature(double temp) {
-        if( temp < 0) {
-            temperature = 0 ;
-        } else if( temp >= 100) {
-            temperature = 100;
-        } else {
-            temperature = temp;
-        }
+        temperature = std::min(100.0, std::max(0.0, temp));
     }
 };
 
