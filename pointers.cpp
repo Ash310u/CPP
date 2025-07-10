@@ -13,5 +13,14 @@ int main() {
     *ptr = 100;
     std::cout << "New value of var after modification through pointer: " << var << std::endl;
 
+    int *pointer = nullptr;
+    if (pointer == nullptr) {
+        std::cout << "Value of pointer: (used nullptr): " << pointer << std::endl;
+    }
+    
+    var = 111;
+    pointer = &var;
+    std::cout << "Value of pointer: (assigned &var to pointer): " << *pointer << std::endl;
+
     return 0;
 }
