@@ -8,6 +8,8 @@ struct Person {
     double height;
 };
 
+void printPerson(Person person);
+
 int main() {
     // Create an instance of Person and assign values
     Person person1;
@@ -20,17 +22,19 @@ int main() {
 
     // Print the details of person1
     std::cout << "Person 1:" << std::endl;
-    std::cout << "Name: " << person1.name << std::endl;
-    std::cout << "Age: " << person1.age << std::endl;
-    std::cout << "Height: " << person1.height << " m" << std::endl;
+    printPerson(person1);
 
     std::cout << std::endl;
-
-    // Print the details of person2
+    
     std::cout << "Person 2:" << std::endl;
-    std::cout << "Name: " << person2.name << std::endl;
-    std::cout << "Age: " << person2.age << std::endl;
-    std::cout << "Height: " << person2.height << " m" << std::endl;
+    // Print the details of person2
+    printPerson(person2);
 
     return 0;
+}
+
+void printPerson(Person person) {
+    std::cout << "Name: " << person.name << std::endl;
+    std::cout << "Age: " << person.age << std::endl;
+    std::cout << "Height: " << person.height << " m" << std::endl;
 }
