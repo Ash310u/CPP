@@ -9,6 +9,7 @@ class Student {
         // Default constructor
         // constructor Overloading 
         // C++ distinguishes overloaded functions/constructors only by their parameter *types* and *number*, not by parameter names.
+        // This syntax is called a "member initializer list" in C++.
         Student() : name("Unknown"), age(0), gpa(0.0) {
             std::cout << "Default constructor" << std::endl;
         }
